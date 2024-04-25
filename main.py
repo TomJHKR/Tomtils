@@ -32,14 +32,15 @@ def main():
             print(f"Using : {use}\n")
             continue
         try:
-            history[perform] = lines
             lines = globals()[perform](lines)
+            if perform != 'help' and perform != 'hist':
+                history[perform] = lines
         except:
             del history[perform]
             continue
 
 def hist(s):
-    del history["hist"]
+    #del history["hist"]
     for key, value in history.items():
         print(f"{key} : {value}\n")
 
