@@ -29,7 +29,7 @@ def main():
         if perform.split(" ")[0] == "use":
             use = perform.split(" ")[1]
             lines = history.get(use)
-            print(f"Using : {use}\n")
+            print(f"Using : {use} - {history[use]}\n")
             continue
         try:
             lines = globals()[perform](lines)
