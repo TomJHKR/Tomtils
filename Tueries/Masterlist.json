@@ -1,0 +1,4 @@
+{
+    "source": "in(field=\"SourceIP\", values=[#])",
+    "remote": "in(field=\"RemoteIP\", values=[#])"
+}
