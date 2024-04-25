@@ -2,6 +2,7 @@
 import sys, select, os
 from Tomaters.Defang import defang
 from Tomaters.Fang import fang
+from Tomaters.Redact import redact
 from Tueries.IPsearches import *
 
 
