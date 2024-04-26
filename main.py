@@ -5,6 +5,9 @@ from Tomaters.Fang import fang
 from Tomaters.Redact import redact
 from Tomaters.Base64 import *
 from Tueries.IPsearches import *
+from Tothers.Filewriters import *
+from rich.console import Console
+from rich.markdown import Markdown
 
 
 
@@ -27,6 +30,8 @@ def main():
             lines = history.get(use)
             print(f"Using : {use} - {history[use]}\n")
             continue
+        if perform == "writetxt":
+            writetxt(history)
         try:
             lines = globals()[perform](lines)
             if perform != 'help' and perform != 'hist':
@@ -41,9 +46,10 @@ def hist(s):
         print(f"{key} : {value}\n")
 
 def help(s):
-    f = open('readme.md', 'r')
-    fileString = f.read()
-    print(fileString)
+    console = Console()
+    with open('readme.md') as f:
+        md = Markdown(f.read())
+        console.print(md)
 
 def change(s):
     print(f"Please enter the your values: ")
