@@ -3,6 +3,7 @@ import sys, select, os
 from Tomaters.Defang import defang
 from Tomaters.Fang import fang
 from Tomaters.Redact import redact
+from Tomaters.Base64 import *
 from Tueries.IPsearches import *
 
 
@@ -10,16 +11,11 @@ from Tueries.IPsearches import *
 
 def main():
     help("")
-    print(f"Please enter the your values: ")
+    
     #val = input("Enter args: ") 
-    lines = []
+    lines = change("")
     global history
     history = {}
-    while True:
-        line = input()
-        if not line:
-            break
-        lines.append(line)
     history["original"] = lines
     while True:
         perform = input(f"What to do: ")
@@ -49,9 +45,17 @@ def help(s):
     fileString = f.read()
     print(fileString)
 
+def change(s):
+    print(f"Please enter the your values: ")
+    lines = []
+    while True:
+        line = input()
+        if not line:
+            break
+        lines.append(line)
+    return lines
 
-
-
-
+def current(s):
+    print(f"Current string/list being used: {s}\n")
 if __name__ == '__main__':
     main()  
