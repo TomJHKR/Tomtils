@@ -1,7 +1,7 @@
 ---------------------------------------
 
 # **Welcome**
-## This is Tomtils your one-stop-shop, all-in-one, space-saving, universal, compact, do-it-all, versatile, multitool, for SOC Analysts
+## This is Tomtils your one-stop-shop, all-in-one, space-saving, universal, compact, do-it-all, versatile, multitool for SOC Analysts
 
 - *Actions*
     - *Tomaters:*
@@ -13,6 +13,8 @@
     - *Tueries:*
         - `source` - Craft Logscale query searching for source ips using inputted list to search for
         - `remote` - Craft Logscale query searching for remote ips using inputted list to search for
+        - `searchIP` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
+        - `searchURL` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
     - *Tothers:*
         - `writetxt` - Write history log to a text file
         - `hist` - List all processed versions of your input
