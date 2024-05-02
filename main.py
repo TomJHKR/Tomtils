@@ -14,21 +14,19 @@ from rich.markdown import Markdown
 
 def main():
     help("")
-    
     #val = input("Enter args: ") 
     lines = change("")
     global history
     history = {}
     history["original"] = lines
     while True:
-        perform = input(f"What to do: ")
-        print(f"")
+        perform = input(f"\nWhat to do: ")
         if perform == "exit":
             break
         if perform.split(" ")[0] == "use":
             use = perform.split(" ")[1]
             lines = history.get(use)
-            print(f"Using : {use} - {history[use]}\n")
+            print(f"\nUsing : {use} - {history[use]}\n")
             continue
         if perform == "writetxt":
             writetxt(history)
@@ -52,16 +50,18 @@ def help(s):
         console.print(md)
 
 def change(s):
-    print(f"Please enter the your values: ")
+    print(f"Please enter the your values (or not): ")
     lines = []
     while True:
         line = input()
         if not line:
             break
         lines.append(line)
+    if line == None:
+        return ""
     return lines
 
 def current(s):
-    print(f"Current string/list being used: {s}\n")
+    print(f"\nCurrent string/list being used: {s}\n")
 if __name__ == '__main__':
     main()  

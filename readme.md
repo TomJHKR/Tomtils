@@ -1,7 +1,7 @@
 ---------------------------------------
 
 # **Welcome**
-## This is Tomtils your one stop, all in one, multitool for SOC Analysts
+## This is Tomtils your one-stop-shop, all-in-one, space-saving, universal, compact, do-it-all, versatile, multitool, for SOC Analysts
 
 - *Actions*
     - *Tomaters:*
