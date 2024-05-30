@@ -15,6 +15,7 @@
         - `remote` - Craft Logscale query searching for remote ips using inputted list to search for
         - `searchIP` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
         - `searchURL` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
+        - `concat` - Used to concatenate large querys from a list
     - *Tothers:*
         - `writetxt` - Write history log to a text file
         - `hist` - List all processed versions of your input
