@@ -16,6 +16,7 @@
         - `searchIP` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
         - `searchURL` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
         - `concat` - Used to concatenate large querys from a list
+        - `port` - Enter port number to see information about that port
     - *Tothers:*
         - `writetxt` - Write history log to a text file
         - `hist` - List all processed versions of your input
