@@ -60,6 +60,21 @@ def searchURL(s):
         except:
             error_print(i)
 
+def searchHash(s):
+    for i in s:
+        i.replace(" ", "")
+        url = f'https://www.virustotal.com/api/v3/files/' + i
+        api_key = os.getenv('VTKEY')
+        headers = {
+            "accept": "application/json",
+            'x-apikey': api_key,
+            
+        }
+        response = requests.get(url, headers=headers)
+        response_json = json.loads(response.text)
+        stats = response_json['data']['attributes']['last_analysis_stats']
+        format_print(stats,i)
+
 def format_print(s,ip):
     mal = s.get('malicious')
     sus = s.get('suspicious')
