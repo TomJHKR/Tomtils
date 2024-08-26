@@ -13,9 +13,10 @@
     - *Tueries:*
         - `source` - Craft Logscale query searching for source ips using inputted list to search for
         - `remote` - Craft Logscale query searching for remote ips using inputted list to search for
-        - `searchIP` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
-        - `searchURL` - Use Virustotal to scan URLs, need VTKEY and is limited to four per minute
-        - `searchHash` - Use Virustotal to scan hashs, need VTKEY and is limited to four per minute
+        - `scan` - Automatically determines if IP, URL or Hash and then performs the corresponding scan below 
+            - `searchIP` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
+            - `searchURL` - Use Virustotal to scan URLs, need VTKEY and is limited to four per minute
+            - `searchHash` - Use Virustotal to scan hashs, need VTKEY and is limited to four per minute
         - `concat` - Used to concatenate large querys from a list
         - `port` - Enter port number to see information about that port
         - `lolbas` - Query .EXE's and .DLL's agianst the lolbas database
