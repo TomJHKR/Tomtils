@@ -15,7 +15,7 @@ from Tomaters.Iprange import *
 
 
 
-
+## Main for determining what function to use
 def main():
     help("")
     #val = input("Enter args: ") 
