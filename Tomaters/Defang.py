@@ -7,15 +7,15 @@ import sys
 # arguments = sys.argv
 # fanged = arguments[1]
 def defang(s):
-    defanged = []
+    defanged_list = []
     for line in s:
-        fanged = line
-        fanged = fanged.replace("hxxp", "http")
-        fanged = fanged.replace("[", "")
-        fanged = fanged.replace("]", "")
-        defanged.append(fanged)
+        defanged = line
+        defanged = fanged.replace("hxxp", "http")
+        defanged = fanged.replace("[", "")
+        defanged = fanged.replace("]", "")
+        defanged_list.append(defanged)
 
     print(f"Outputting Defanged\n")
-    print(*defanged, sep=", ")
+    print(*defanged_list, sep=", ")
     print("")
-    return defanged
+    return defanged_list
