@@ -8,8 +8,6 @@ With a wide range of utilities for various network security tasks, Tomtils helps
 
 **Tomtils** is a **hobby project** that I work on in my spare time. The goal is to create a versatile and compact toolset for SOC analysts. As this is an ongoing project, **methods and features will be added over time** as new ideas come up or based on suggestions from users. Feel free to reach out with any feature requests or ideas, and I'll do my best to integrate them!
 
-## Features 🎯
-
 ### *Actions* ⚙️
 - *Tomaters* 🍅:
     - `fang` - This is used to fang an input 🔒
@@ -51,8 +49,6 @@ With a wide range of utilities for various network security tasks, Tomtils helps
 ## Usage 🖥️
 
 ### Command-Line Arguments 📜
-
-Tomtils provides a command-line interface (CLI) that allows you to specify the method you want to execute and pass input as needed.
 
 - **`-m` / `--method`**: The method to execute (e.g., `decode64`, `fang`).
 - **`-i` / `--input`**: (Optional) The input for the method.

@@ -14,12 +14,7 @@ from Tueries.Tilers import *
 
 from Tothers.Filewriters import *
 
-from rich.console import Console
-from rich.markdown import Markdown
-
-import argparse
-
-
+from helpers import help,parse_arguments
 
 ## Main for determining what function to use
 def main():
@@ -54,7 +49,6 @@ def main():
             case _:
                 try:
                     current = globals()[perform]()
-                    print(type(current))
                     if isinstance(current, list):
                         save_history(format_history_entry(current[0], current[1], perform),history_temp_file)
                     else:
@@ -65,11 +59,6 @@ def main():
 
 
 
-def help():
-    console = Console()
-    with open('readme.md') as f:
-        md = Markdown(f.read())
-        console.print(md)
 
 def change(s):
     print(f"Please enter the your values (or not): ")
@@ -87,17 +76,7 @@ def change(s):
 def current(s):
     print(f"\nCurrent string/list being used: {s}\n")
 
-# Function to parse arguments and execute the specified method
-def parse_arguments():
-    parser = argparse.ArgumentParser(description="Tomtils: Utility Tool for SOC Analysts")
 
-    parser.add_argument('-m','--method', required=False, type=str, help='The method to execute (e.g., "decode64", "fang")')
-
-    # Add optional argument for passing input to the method
-    parser.add_argument('-i','--input', type=str, required=False, help='Specify the input for the method')
-
-    args = parser.parse_args()
-    return args
 
 if __name__ == '__main__':
     main()  

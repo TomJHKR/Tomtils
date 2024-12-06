@@ -13,7 +13,7 @@ def defang(inp=None):
     for line in s:
         fanged = line
         defanged = fanged.replace("http", "hxxp")
-        defanged = fanged.replace(".", "[.]")
+        defanged = defanged.replace(".", "[.]")
         defanged_list.append(defanged)
 
     print(f"Outputting Defanged\n")

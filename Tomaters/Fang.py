@@ -9,7 +9,7 @@ def fang(inp=None):
     for line in s:
         defanged = line
         fanged = defanged.replace("hxxp", "http")
-        fanged = defanged.replace("[.]", ".")
+        fanged = fanged.replace("[.]", ".")
         fanged_list.append(fanged)
 
     print(f"Outputting Fanged\n")
