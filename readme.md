@@ -12,8 +12,6 @@
         - `encode64` - Encode base64
         - `iprange` - Given an ip range eg.`100.224.0.0/12` generate single column csv value of all ip's in subnet 
     - *Tueries:*
-        - `source` - Craft Logscale query searching for source ips using inputted list to search for
-        - `remote` - Craft Logscale query searching for remote ips using inputted list to search for
         - `scan` - Automatically determines if IP, URL or Hash and then performs the corresponding scan below 
             - `searchIP` - Use Virustotal to scan IPs, need VTKEY and is limited to four per minute
             - `searchURL` - Use Virustotal to scan URLs, need VTKEY and is limited to four per minute
