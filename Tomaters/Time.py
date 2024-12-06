@@ -1,7 +1,8 @@
 import sys
 
 # Converting time strings
-def time(s):
+def time():
+    ## TODO : Finish writing the function
     s = input(f"\nEnter time string to format")
     form = input(f"""\nWhat format type\n
                  1 - HH:MM\n

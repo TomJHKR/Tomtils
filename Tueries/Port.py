@@ -3,8 +3,11 @@ import sys
 import json
 import os
 
-def port(s):
-    port = input(f"What port: ")
+def port(inp=None):
+    if not inp:
+        port = input(f"What port: ")
+    else:
+        port = inp
     f = open("Tueries/PortList.json")
     data = json.load(f)
     try:
@@ -12,7 +15,7 @@ def port(s):
             format_print(i)
     except:
         print(f"{bcolors.BOLD}{bcolors.HEADER}{bcolors.RED}ERROR: PORT not found{bcolors.ENDC}")
-    return s
+    return f"Perfomed function port\n{port}"
 
 def format_print(s):
     print(f'\n{bcolors.HEADER}{bcolors.BOLD}{bcolors.OKBLUE}Port : {bcolors.ENDC}{s["port"]}')

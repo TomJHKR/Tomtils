@@ -1,7 +1,9 @@
 #!/usr/bin/python
 import sys
+from helpers import validate_input
 
-def redact(s):
+def redact(inp=None):
+    s = validate_input(inp)
     redacted = []
     to_redact = input("1 : redact by string\n2 : redact by position\n")
     match to_redact:
@@ -24,5 +26,7 @@ def redact(s):
                     unredacted[int(i)-1] = "*"
                     current = "".join(unredacted)
                 redacted.append(current)
-    print(redacted)
-    return redacted
+    print(f"Outputting Redacted\n")
+    print(*redacted, sep=", ")
+    print("")
+    return [s,redacted]

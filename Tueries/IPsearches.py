@@ -1,12 +1,7 @@
 #!/usr/bin/python
-import sys
-import json
-import requests
+import sys, json, requests, os, time, base64, re
 from dotenv import load_dotenv
-import os
-import time
-import base64
-import re
+from helpers import validate_input
 
 load_dotenv()
 
@@ -14,16 +9,6 @@ def create(s):
     f = open("Tueries/Masterlist.json")
     data = json.load(f)
     print(data)
-
-def source(s):
-    q = f"""in(field="SourceIP", values=[{', '.join(s)}])\n"""
-    print(q)
-    return q
-
-def remote(s):
-    q = f"""in(field="RemoteIP", values=[{', '.join(s)}])\n"""
-    print(q)
-    return q
 
 def searchIP(s):
     url = f'https://www.virustotal.com/api/v3/ip_addresses/' + s
@@ -84,7 +69,8 @@ def error_print(ip):
     print(f'{bcolors.RED}{bcolors.BOLD}Not Found :({bcolors.ENDC}')
 
 
-def scan(s):
+def scan(inp=None):
+    s = validate_input(inp)
     for i in s:
         i.replace(" ","")
         determine_type(i)
