@@ -2,7 +2,7 @@ import base64
 import sys
 
 def decode64(s=None):
-    if not inp:
+    if not s:
         s = input(f"\nEnter string to decode: ")
     charset = input("1 - UTF-8\n2 - ascii\n")
     to_use = ""
